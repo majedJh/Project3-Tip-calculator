@@ -46,7 +46,8 @@ Users should be able to:
 - HTML5
 - CSS
 - Flex
-- Used my small self-built framework
+- Used my small self-built CSS library
+- JS 
 
 ### What I learned
 
