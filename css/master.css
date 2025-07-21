@@ -1,0 +1,187 @@
+:root {
+  --Green-primary: hsl(172, 67%, 45%);
+  --Green-900: hsl(183, 100%, 15%);
+  --Grey-500: hsl(186, 14%, 43%);
+  --Grey-400: hsl(184, 14%, 56%);
+  --Grey-200: hsl(185, 41%, 84%);
+  --Grey-50: hsl(189, 47%, 97%);
+}
+body {
+  font-family: "Outfit";
+  overflow-x: hidden;
+  background-color: var(--Grey-200);
+  font-family: "Space Mono";
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul,
+ol {
+  padding: 0;
+}
+
+/* end global elements  */
+.all-container {
+  width: 80%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+}
+.all-container .box {
+  padding: 15px;
+  border-radius: 6px;
+  width: calc(50% - 10px);
+  height: 340px;
+  position: relative;
+}
+.bill-input,
+.tip-select {
+  margin-bottom: 20px;
+  position: relative;
+}
+.bill-input label,
+.num-input label,
+.tip-select span {
+  font-size: 13px;
+  color: var(--Grey-500);
+  margin-bottom: 5px;
+}
+.bill-input input,
+.num-input input {
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  padding: 7px 10px;
+  background-color: var(--Grey-50);
+  direction: rtl;
+  height: 40px;
+}
+.bill-input::before {
+  content: "";
+  background-image: url(/images/icon-dollar.svg);
+  background-size: 10px 12px;
+  width: 10px;
+  height: 12px;
+  position: absolute;
+  left: 10px;
+  bottom: 14px;
+}
+.num-input::before {
+  content: "";
+  background-image: url(/images/icon-person.svg);
+  background-size: 10px 12px;
+  width: 10px;
+  height: 12px;
+  position: absolute;
+  left: 25px;
+  bottom: 60px;
+}
+@media (max-width: 767px) {
+  .num-input::before {
+    bottom: 20px;
+  }
+}
+.bill-input input::placeholder,
+.num-input input::placeholder,
+input.tip-box::placeholder {
+  transition: 0.3s;
+}
+.bill-input input:focus,
+.num-input input:focus,
+input.tip-box {
+  outline: none;
+}
+.bill-input input:focus::placeholder,
+.num-input input:focus::placeholder,
+input.tip-box:focus::placeholder {
+  opacity: 0;
+}
+.tip-select .tip-boxes {
+  flex-wrap: wrap;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+.tip-select .tip-boxes .tip-box {
+  width: 28%;
+  padding: 7px 10px;
+  margin: 5px;
+  background-color: var(--Green-900);
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+.tip-select .tip-boxes .tip-box:hover {
+  background-color: var(--Green-primary);
+  transition: .3s background-color;
+}
+@media (max-width: 767px) {
+  .tip-select .tip-boxes .tip-box {
+    width: 40%;
+  }
+}
+.tip-select .tip-boxes .tip-box.active {
+  background-color: var(--Green-primary);
+}
+.tip-select .tip-boxes input.tip-box {
+  background-color: var(--Grey-50);
+  color: var(--Grey-500);
+}
+/* end first box  */
+.all-container .box:last-child {
+  background-color: var(--Green-900);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.tip-amount-box,
+.total-box {
+  margin-bottom: 30px;
+}
+.tip-amount-box .tip-amount-content div,
+.total-box .total-content div {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.tip-amount-box .tip-amount-content span,
+.total-box .total-content span {
+  font-size: 12px;
+  color: var(--Grey-400);
+}
+.tip-amount-box .amount-number,
+.total-box .total-number {
+  color: var(--Green-primary);
+  font-size: 30px;
+}
+@media (max-width: 767px) {
+  .tip-amount-box .amount-number,
+.total-box .total-number {
+  font-size: 25px;
+}
+}
+.box:last-child > div:last-child {
+  width: calc(100%);
+  background-color: var(--Green-primary);
+  text-align: center;
+  border-radius: 6px;
+  margin-top: auto;
+  cursor: pointer;
+}
+.box:last-child > div:last-child.invalid-button {
+  opacity: 0.3;
+}
