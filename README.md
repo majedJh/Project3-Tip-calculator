@@ -32,7 +32,7 @@ Users should be able to:
 
 ![](./Project%20screenshots/Screenshot%202025-07-21%20150024.png)
 
-![](./Project%20screenshots/Screenshot%202025-07-21%20150002.png)
+![](./Project%20screenshots/Screenshot%202025-07-21%20150055.png)
 
 
 ### Links
